@@ -1,0 +1,18 @@
+<%= form_for(@task) do |f| %>
+  <div class='field'>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </div>
+  <div class='field'>
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <div class='actions'>
+    <%= f.submit %>
+    <!--submit-->
+    <!--引数を指定しないと、対象のモデルが保存済みかを調べて、-->
+    <!--「Create モデル名」「Update モデル名」のどちらかを表示する。-->
+  </div>
+<% end %>
+
+<%= link_to 'Back', tasks_path %>
